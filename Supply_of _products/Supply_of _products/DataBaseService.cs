@@ -128,7 +128,7 @@ namespace Supply_of__products
 			try
 			{
 				NpgsqlCommand com = new NpgsqlCommand("SELECT * FROM report_table WHERE date BETWEEN '" + start_date + "' AND '" 
-					+ end_date + "' ORDER BY date", nc);
+					+ end_date + "' ORDER BY name_supplier", nc);
 				nc.Open();  //ОpenConnection
 				NpgsqlDataReader reader;
 				reader = com.ExecuteReader();
